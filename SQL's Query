@@ -1,0 +1,12 @@
+-- The "--" is for single line comment in SQL
+
+/* 
+And the "/* */ " is for multiple comment in SQL
+*/
+
+
+Create Database NiceTry --for Create our Database
+
+
+--Select (Called for the result data in database)
+SELECT columnName1, columnName2,columnName3 From tableName
