@@ -5,7 +5,7 @@ And the "/* */ " is for multiple comment in SQL
 */
 
 
-Create Database NiceTry --for Create our Database
+
 
 --SELECT
 
@@ -16,6 +16,11 @@ Create Database NiceTry --for Create our Database
     
     --To call unduplicate field or data in table
     SELECT DISTINCT columnName FROM tableName
+    
+    --For show or call the counted data
+    SELECT COUNT(*) columnName FROM tableName 
 
+--CREATE    
 
-
+    Create Database NiceTry --for Create our Database
+    CREATE TABLE tableName
