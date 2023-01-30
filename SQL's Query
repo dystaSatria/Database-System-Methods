@@ -10,3 +10,5 @@ Create Database NiceTry --for Create our Database
 
 --Select (Called for the result data in database)
 SELECT columnName1, columnName2,columnName3 From tableName
+
+Select * from tableName --Will called the all result in the tableName 
