@@ -7,8 +7,15 @@ And the "/* */ " is for multiple comment in SQL
 
 Create Database NiceTry --for Create our Database
 
+--SELECT
 
---Select (Called for the result data in database)
-SELECT columnName1, columnName2,columnName3 From tableName
+    --Select (Called for the result data in database)
+    SELECT columnName1, columnName2,columnName3 From tableName
 
-Select * from tableName --Will called the all result in the tableName 
+    Select * from tableName --Will called or select the all result in the tableName
+    
+    --To call unduplicate field or data in table
+    SELECT DISTINCT columnName FROM tableName
+
+
+
