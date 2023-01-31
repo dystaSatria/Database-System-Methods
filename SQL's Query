@@ -32,7 +32,20 @@ And the "/* */ " is for multiple comment in SQL
             PRIMARY KEY( one or more columns )  
              );
 
+     --EXAMPLE:
+        Create table human (
+	              humanID int,
+	              humanName varchar(255),
+	              humanSurname varchar(255)
+                    );
 
+        Create table animals(
+	                animalID int,
+	                animalName varchar(255),
+	                animalType varchar(255)
+                    )
+                    
+                    --if u just write "CREATE table human" the code will error
 --DROP
     --This query is for drop (delete) the database
     DROP DATABASE NiceTry --for the database name, The alphabetic elements(like uppercase or lowercase) have an effect on the database name
