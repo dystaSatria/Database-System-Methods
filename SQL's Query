@@ -23,4 +23,20 @@ And the "/* */ " is for multiple comment in SQL
 --CREATE    
 
     Create Database NiceTry --for Create our Database
-    CREATE TABLE tableName
+    CREATE TABLE table_name(
+            column1 datatype,
+            column2 datatype,
+            column3 datatype,
+            .....
+            columnN datatype,
+            PRIMARY KEY( one or more columns )  
+             );
+
+
+--DROP
+    --This query is for drop (delete) the database
+    DROP DATABASE NiceTry --for the database name, The alphabetic elements(like uppercase or lowercase) have an effect on the database name
+                          --the query code will error if u write "nicetry" or "NICETRY" u must write 100% the database name coreectly
+                          
+    DROP TABLE table_name; -- this is for drop the table
+     
