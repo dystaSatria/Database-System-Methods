@@ -4,3 +4,4 @@
 
  INT
  VARCHAR(length)
+	BIN
