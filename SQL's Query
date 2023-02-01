@@ -53,3 +53,23 @@ And the "/* */ " is for multiple comment in SQL
                           
     DROP TABLE table_name; -- this is for drop the table
      
+--Alter
+	--ALTER TABLE ->this for add table , delete or modify table
+		--ALTER TABLE --> ADD
+			ALTER TABLE table_name
+			ADD column_name datatype;
+		
+			-example: 
+			ALTER TABLE human
+			ADD humanJob varchar(255);
+		
+		--ALTER TABLE -->DROP COLUMN
+			ALTER TABLE table_name
+			DROP COLUMN column_name;
+			
+			-example: 
+			ALTER TABLE human
+			DROP COLUMN humanJob;
+			
+			--espiacially for the rename we must control cause its not worked(the query said the syntax is error)
+		
