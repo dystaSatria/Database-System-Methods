@@ -2,6 +2,6 @@
 
 # Data Types
 
- INT
- VARCHAR(length)
+INT
+VARCHAR(length)
 BIN
