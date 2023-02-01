@@ -1,3 +1,3 @@
 # SQL-Commander
 
-# DATA Types
+# Data Types
