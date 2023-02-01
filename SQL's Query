@@ -5,7 +5,13 @@ And the "/* */ " is for multiple comment in SQL
 */
 
 
-
+--USE go 
+	--this code to start the database you want to use
+	USE databaseName
+	GO
+	--Example
+	USE NiceTry
+	go
 
 --SELECT
 
