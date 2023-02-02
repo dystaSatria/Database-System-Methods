@@ -2,7 +2,7 @@
 
 ## Data Types
 
-#### Integers
+#### Integer
 
 ```sql
 INT -- Between -2 billion / +2 billion. It uses 4 bytes of Storage.
@@ -21,7 +21,7 @@ BIT -- It can be used in cases of two different situations. E.g. girl/boy
 ```
 
 ```sql
-BIGINT -- Between 2⁶³ and 2⁶³. It uses 8 bytes of Storage
+BIGINT -- Between 2^6^3 and 2⁶³. It uses 8 bytes of Storage
 ```
 
 #### Float
