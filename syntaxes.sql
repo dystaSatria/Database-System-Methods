@@ -64,4 +64,4 @@ ALTER TABLE Persons
 ADD CONSTRAINT CHK_PersonAge CHECK (Age>=18 AND City='Sandnes');
 
 ALTER TABLE Persons
-DROP CHECK CHK_PersonAge;
+DROP CHECK CHK_PersonAge
