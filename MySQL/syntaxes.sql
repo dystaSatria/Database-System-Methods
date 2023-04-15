@@ -1,5 +1,5 @@
 CREATE DATABASE databasename;
-........
+......
 DROP DATABASE databasename;
 
 CREATE TABLE table_name (
