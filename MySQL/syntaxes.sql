@@ -49,6 +49,8 @@ CREATE INDEX
 
 --Check
 
+
+..........
 CREATE TABLE Persons (
     ID int NOT NULL,
     LastName varchar(255) NOT NULL,
