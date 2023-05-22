@@ -96,6 +96,18 @@ EXEC ogrencileri_listele 1165613035
 
 ```
 
+## Ogrencileri_listele3 saklı prosedürü varchar() tipinde @ad parametresi kullanılarak gönderilen veri ile başlayan adlar listelenmekte.
+
+```sql
+
+CREATE PROCEDURE ogrencileri_listele3 
+(
+@ad varchar(20)
+)AS
+SELECT ogr_no, adi, soyadi, bol_adi FROM ogrenci, bolumler WHERE ogrenci.bol_no = bolumler.bol_no AND adi like @ad + '%'
+
+exec ogrencileri_listele3 'B' --B ile başlaya listeleyecek.
+```
 
 
 
