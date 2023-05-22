@@ -45,5 +45,12 @@ CREATE PROCEDURE <procedure adı> AS
 BEGIN
 <T-SQL Kodları>
 END
+
+--Ornek
+
+CREATE PROCEDURE ogrencileri_listele
+AS
+SELECT ogr_no, adi, soyadi, bol_adi FROM ogrenci, bolumler WHERE ogrenci.bol_no = bolumler.bol_no
+
 ```
 
