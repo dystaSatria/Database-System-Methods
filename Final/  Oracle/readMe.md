@@ -95,4 +95,10 @@ SELECT * FROM COUNTRIES ORDER BY COUNTRY_NAME DESC
 SELECT * FROM EMPLOYERS WHERE HIRE_DATE >= '01/01/2008'
 
 ```
+## İşe başlama tarihinden bu yana 15 yıl geçen personeli listeleyin.
 
+```SQL
+
+SELECT * FROM EMPLOYERS WHERE SYSDATE - HIRE_DATE > 365*15 
+
+```
