@@ -214,3 +214,28 @@ SELECT * FROM fiyat_araligi (15,60)
   
 ```
 
+kategoriye_gore_urun_bul adında tanımlanan fonksiyonda verilen kategori tipine göre (@tip
+değişkenine göre) arama yapmakta ve bulunan değerleri RETURN komutu ile tabloya geri
+döndürmektedir.
+
+```sql
+
+CREATE FUNCTION kategoriye_gore_urun_bul(@tip VARCHAR(20))
+ RETURNS @aranan_urunler TABLE
+(
+urun_id INT PRIMARY KEY NOT NULL, 
+u_adi VARCHAR(30),
+kat_adi VARCHAR(20)
+)AS 
+  BEGIN
+    INSERT INTO @aranan_urunler SELECT urun_id, urun_adi, kategori_adi FROM
+       urunler u, kategoriler k WHERE u.kategori_id = k.kategori_id AND
+       kategori_adi = @tip
+  RETURN
+
+END 
+
+--Kahve kategorisinde bulunan ürünlerin istenilen bilgileri fonksiyon ile bulunabilir.
+SELECT * FROM kategoriye_gore_urun_bul('kahve')
+```
+
