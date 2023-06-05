@@ -112,8 +112,28 @@ SELECT ogr_no, adi, soyadi, bol_adi FROM ogrenci, bolumler WHERE ogrenci.bol_no 
 
 exec ogrencileri_listele3 'B' --B ile başlaya listeleyecek.
 ```
+
+
 <br>
 <br>
+
+## Scalar-Valued Functions - Skaler Değerli Fonksiyonlar
+
+```sql
+CREATE FUNCTION fonksiyon_adi
+(
+  @parametre1 veri_tipi,
+) @parametre2 veri_tipi
+RETURNS veri_tipi --geri dönecek değerin veri tipi AS
+BEGIN
+  -- geri dönecek değer tanımlanır
+DECLARE @donen veri_tipi
+-- SQL kodları; dönen parametreye değer aktarımı gibi işlemler RETURN @donen
+END
+```
+
+
+```
 
 
 
