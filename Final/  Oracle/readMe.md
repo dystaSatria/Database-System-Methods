@@ -1,1 +1,24 @@
 # Code Summary
+
+
+## CREATE TABLE
+
+```SQL
+Create Table Proje
+(
+ID Number NOT NULL,
+PROJE_ID VARCHAR2 (100 BYTE) NOT NULL,
+BUTCE NUMBER (10,2)
+DOGUM_TAR DATE
+CONSTRAINT PERSONEL_PK PRIMARY KEY
+  (
+  ID 
+  )  
+  ENABLE
+);
+```
+
+## INSERT
+
+
+
