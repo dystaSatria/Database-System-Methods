@@ -127,13 +127,90 @@ CREATE FUNCTION fonksiyon_adi
 RETURNS veri_tipi --geri dönecek değerin veri tipi AS
 BEGIN
   -- geri dönecek değer tanımlanır
-DECLARE @donen veri_tipi
+  DECLARE @donen veri_tipi
 -- SQL kodları; dönen parametreye değer aktarımı gibi işlemler RETURN @donen
+  RETURN @donen
+
 END
 ```
 
+* KDV hesaplayan bir fonksiyon aşağıdaki gibi yazılabilir. Fonksiyonun adı kdv_hesapla olarak verilmiştir. @fiyat ve @oran adında iki parametre ile çalışan fonksiyon money tipinde kdv dahil fiyatı hesaplamaktadır. Hesaplanan değer @kdvlifiyat adlı değişkende tutulmakta ve bu değişken RETURN ifadesi ile geri döndürülmektedir.
 
+```sql
+
+CREATE FUNCTION kdv_hesapla (@fiyat MONEY, @oran FLOAT) 
+RETURNS MONEY
+AS
+BEGIN
+     DECLARE @kdvlifiyat MONEY
+     SET @kdvlifiyat=@fiyat+@fiyat*@oran
+     RETURN @kdvlifiyat
+END
+• SELECT dbo.kdv_hesapla (100,0.18)
 ```
 
+* Örneğin ilgili kategoride (yani tipine göre) kaç ürün olduğu ile ilgili bir sayı bilgisine sürekli ihtiyaç duyuluyorsa aşağıdaki fonksiyon kullanılabilir.
 
+```sql
+CREATE FUNCTION urun_say (@tip VARCHAR(30))
+  RETURNS INT
+  AS
+  BEGIN
+DECLARE @say INT
+SELECT @say = COUNT(*) FROM urunler u, kategoriler k
+WHERE u.kategori_id = k.kategori_id AND kategori_adi = @tip RETURN @say
+END
+
+
+--Kahve kategorisindeki urun sayısı bulunmak istendiğinde fonksiyon aşağıdaki gibi çalıştırılabilir.
+SELECT dbo.urun_say('Kahve')
+```
+
+* Table-Valued Functions - Tablo Değerli Fonksiyonlar
+
+```sql
+CREATE FUNCTION <fonksiyon adı> (<parametreler>) 
+RETURNS <değişken tablo adı> TABLE
+(
+     <tablo alanları>
+)
+AS BEGIN
+     <T-SQL Kodları>
+RETURN END
+
+```
+```sql
+CREATE FUNCTION fonksiyon_adi
+(
+--parametreler
+  @parametre1 veri_tipi,
+  @parametre2 veri_tipi )
+  RETURNS @tablo TABLE
+(
+ alan_adi1 veri_tipi,
+)alan_adi2 veri_tipi
+AS BEGIN
+--@tablo değişkeni içini girilen parametreler ile doldur
+RETURN END
+
+```
+Verilen fiyat aralığındaki ürünlerin adını kategorisini ve satış fiyatını gösteren bir fonksiyon yazalım.
+
+```sql
+CREATE FUNCTION fiyat_araligi
+ ( 
+ @altfiyat money,
+ @ustfiyat money
+ ) 
+ RETURNS TABLE
+ AS
+ RETURN
+ ( SELECT urun_adi, kategori_adi, satis_fiyat FROM urunler u, kategoriler k
+WHERE u.kategori_id=k.kategori_id AND satis_fiyat BETWEEN @altfiyat AND @ustfiyat 
+)
+
+--Satışı 5 ile 60 TL arasındaki ürünleri listeleyelim.
+
+  
+```
 
