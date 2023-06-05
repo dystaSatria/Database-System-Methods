@@ -82,4 +82,17 @@ SELECT * FROM EMPLOYERS WHERE EMPLOYERS_ID  IN (150,160)
 
 ```
 
+## Ülkeler tablosunu, ülke adına göre Z’den A’ya doğru sıralayın.
+
+```SQL 
+SELECT * FROM COUNTRIES ORDER BY COUNTRY_NAME DESC
+```
+
+## 2008 yılından sonra işe başlayan personelin listeleyin.
+
+```SQL
+
+SELECT * FROM EMPLOYERS WHERE HIRE_DATE >= '01/01/2008'
+
+```
 
