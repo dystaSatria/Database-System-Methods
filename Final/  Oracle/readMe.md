@@ -45,5 +45,41 @@ TRUNCATE TABLE [sema_adı].tablo_adı; OR TRUNCATE TABLE tablo_adı;
 DELETE FROM tablo_adı [WHERE kosul ];
 ```
 
+## UPDATE
+
+```SQL
+UPDATE employees
+SET salary = 5000
+WHERE employee_id = 100;
+```
+
+## DISTINCT (TEKRARSIZ)
+
+```SQL
+SELECT DISTICT FIRST_NAME FROM EMPLOYERS
+```
+ ## SELECT SORGULARI
+ ```SQL
+SELECT DISTICT FIRST_NAME FROM EMPLOYERS
+```
+
+## SELECT FIRST_NAME & LAST_NAME
+ ```SQL
+SELECT FIRST_NAME || '' || LAST_NAME AS 'AD SOYADI' FROM EMPLOYERS
+```
+ 
+## Minimum maaşın 10000'den fazla olan işlerin tüm bilgilerini görüntüleyin.
+
+```SQL
+SELECT * FROM JOBS WHERE MIN_SALARY > 10000 
+```
+
+## 150 ve 160 numaralı personelin bilgilerini listeleyin.
+
+```SQL
+
+SELECT * FROM EMPLOYERS WHERE EMPLOYERS_ID  IN (150,160)
+
+```
 
 
