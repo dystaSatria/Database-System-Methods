@@ -33,7 +33,11 @@ DROP TABLE PROJE
 
 ```
 
+## TRUNCATE (Tablo içinde  tüm verileri silmek için )
 
+```SQL
+TRUNCATE TABLE [sema_adı].tablo_adı; OR TRUNCATE TABLE tablo_adı;
+```
 
 
 
