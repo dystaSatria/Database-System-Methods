@@ -39,5 +39,11 @@ DROP TABLE PROJE
 TRUNCATE TABLE [sema_adı].tablo_adı; OR TRUNCATE TABLE tablo_adı;
 ```
 
+## DELETE
+
+```SQL
+DELETE FROM tablo_adı [WHERE kosul ];
+```
+
 
 
