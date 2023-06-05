@@ -210,7 +210,7 @@ WHERE u.kategori_id=k.kategori_id AND satis_fiyat BETWEEN @altfiyat AND @ustfiya
 )
 
 --Satışı 5 ile 60 TL arasındaki ürünleri listeleyelim.
-
+SELECT * FROM fiyat_araligi (15,60)
   
 ```
 
