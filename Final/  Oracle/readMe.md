@@ -1,4 +1,4 @@
-# Codes
+# ORACLE CODES
 
 <br>
 <br>
@@ -175,4 +175,39 @@ SELECT AVG (DISTINCT FIRST_NAME) FROM EMPLOYERS
 SELECT ROUND(AVG(ALL FIRST),3) FROM EMPLOYERS 
 SELECT ROUND(AVG(DISTINCT FIRST),3) FROM EMPLOYERS 
 ```
+
+## MIN & MAX
+
+```SQL
+SELECT MIN(SALARY) FROM EMPLOYERS
+SELECT MAX(SALARY) FROM EMPLOYERS
+```
+
+## TRIGGER 
+
+```SQL
+ --Örneğin; EMPLOYEES tablosundan bir çalışanın adı silinirse, bu satırın başka bir örnek tablo olan OLD_EMPLOYEES tablosuna otomatik olarak yazılması sağlanabilir;
+ CREATE OR REPLACE TRIGGER trg_employees_delete
+AFTER DELETE ON EMPLOYEES
+FOR EACH ROW
+BEGIN
+  INSERT INTO OLD_EMPLOYEES (employee_id, employee_name)
+  VALUES (:OLD.employee_id, :OLD.employee_name);
+END;
+/
+```
+
+## INTO
+
+```SQL
+DECLARE 
+  sayi INTEGER;
+BEGIN 
+  SELECT COUNT(*) INTO sayi
+  FROM Employers WHERE FIRST_NAME= 'JOHN' ;
+
+END
+
+```
+
 
