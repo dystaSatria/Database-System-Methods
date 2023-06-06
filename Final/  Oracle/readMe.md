@@ -210,4 +210,47 @@ END
 
 ```
 
+## dbms_output.put_line()
+
+```SQL
+BEGIN
+    dbms_output.put_line('MERHABA DUNYA');
+END
+
+```
+
+```output
+MERHABA DUNYA
+```
+
+## DECLARE
+
+```SQL
+DECLARE 
+  a integer := 10;
+  b integer := 20;
+  c integer ;
+  f real;
+  
+BEGIN 
+  c := a + b ;
+  f := c / b;
+
+END
+```
+## function
+
+```SQL
+FUNCTION personel_adi (
+IS ad IN VARCHAR2) RETURN VARCHAR2
+BEGIN
+SELECT FIRST_NAME FROM EMPLOYEES WHERE LAST_NAME LIKE ‘A%’; RETURN ad;
+END personel_adi;
+```
+
+## LAST_DAY
+
+```SQL
+SELECT LAST_DAY(HIRE_DATE) FROM EMPLOYERS;
+```
 
