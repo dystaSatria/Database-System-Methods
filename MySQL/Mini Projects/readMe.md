@@ -2,6 +2,7 @@
 
 Table: Person
 
+```console
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -9,6 +10,8 @@ Table: Person
 | lastName    | varchar |
 | firstName   | varchar |
 +-------------+---------+
+```
+
 personId is the primary key column for this table.
 This table contains information about the ID of some persons and their first and last names.
  
