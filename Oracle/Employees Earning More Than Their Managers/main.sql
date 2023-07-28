@@ -1,1 +1,2 @@
-SELECT e.name as 'Employee' from Employee e, Employee m  WHERE e.managerID = m.ID AND e.salary>m.salary
+SELECT EM.name AS Employee FROM Employee EM ,Employee MNGR
+WHERE EM.managerId=MNGR.id AND EM.salary>MNGR.salary
