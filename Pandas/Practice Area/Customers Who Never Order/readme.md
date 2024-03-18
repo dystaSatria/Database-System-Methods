@@ -80,7 +80,7 @@ insert into Orders (id, customerId) values ('2', '1')
 
 - Pandas Schema
 
-```pandas
+```python
 
 data = [[1, 'Joe'], [2, 'Henry'], [3, 'Sam'], [4, 'Max']]
 customers = pd.DataFrame(data, columns=['id', 'name']).astype({'id':'Int64', 'name':'object'})
