@@ -63,4 +63,27 @@ Output:
 | Max       |
 +-----------+
 ```
- 
+
+- SQL Schema
+```sql
+ Create table If Not Exists Customers (id int, name varchar(255))
+Create table If Not Exists Orders (id int, customerId int)
+Truncate table Customers
+insert into Customers (id, name) values ('1', 'Joe')
+insert into Customers (id, name) values ('2', 'Henry')
+insert into Customers (id, name) values ('3', 'Sam')
+insert into Customers (id, name) values ('4', 'Max')
+Truncate table Orders
+insert into Orders (id, customerId) values ('1', '3')
+insert into Orders (id, customerId) values ('2', '1')
+```
+
+- Pandas Schema
+
+```pandas
+
+data = [[1, 'Joe'], [2, 'Henry'], [3, 'Sam'], [4, 'Max']]
+customers = pd.DataFrame(data, columns=['id', 'name']).astype({'id':'Int64', 'name':'object'})
+data = [[1, 3], [2, 1]]
+orders = pd.DataFrame(data, columns=['id', 'customerId']).astype({'id':'Int64', 'customerId':'Int64'})
+```
