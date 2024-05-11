@@ -50,6 +50,11 @@ CREATE INDEX
 --Check
 
 
+--  add a primary key to the "id" column and set it as auto-increment
+ALTER TABLE table_name
+MODIFY COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
+
+
 
 CREATE TABLE Persons (
     ID int NOT NULL,
